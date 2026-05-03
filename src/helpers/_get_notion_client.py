@@ -9,6 +9,7 @@ class NotionDatabases:
     personal_records: str
     sleep: str
     daily_steps: str
+    weight: str   # ✅ ADDED
 
 
 def get_notion_client() -> tuple[Client, NotionDatabases]:
@@ -19,6 +20,7 @@ def get_notion_client() -> tuple[Client, NotionDatabases]:
         personal_records=os.getenv("NOTION_PR_DB_ID"),
         sleep=os.getenv("NOTION_SLEEP_DB_ID"),
         daily_steps=os.getenv("NOTION_STEPS_DB_ID"),
+        weight=os.getenv("NOTION_WEIGHT_DB_ID"),  # ✅ ADDED
     )
 
     notion_token = os.getenv("NOTION_TOKEN")
